@@ -1,7 +1,9 @@
 # Python Intro II Assignments
+
 Submit a PR for each exercise.
 
 # Ex. 1 Sort with Lambda
+
 Given the following list:
 
 ```python
@@ -13,6 +15,7 @@ people_list = [
 ```
 
 Create a function called `sort_people()` that accepts the following arguments:
+
 - A list of people
 - A field that will used to sort the people (e.g. name, age, weight, etc...)
 - The sort direction (e.g. asc or desc)
@@ -33,13 +36,15 @@ def ex1():
 ```
 
 Output:
+
 ```
 [{'name': 'alice', 'age': 20, 'weight': 160, 'sex': 'male', 'id': 1},
- {'name': 'bob', 'age': 10, 'weight': 130, 'sex': 'male', 'id': 2}, 
+ {'name': 'bob', 'age': 10, 'weight': 130, 'sex': 'male', 'id': 2},
  {'name': 'charlie', 'age': 15, 'weight': 120, 'sex': 'female', 'id': 3}]
 ```
 
 # Ex. 2 Filter
+
 Given the following list:
 
 ```python
@@ -51,6 +56,7 @@ people_list = [
 ```
 
 Create a function called `filter_males()` that accepts the following arguments:
+
 - A list of people
 
 This function returns only the males from the list of people.
@@ -67,13 +73,16 @@ def ex2():
     filtered_list = filter_males(people_list)
     print(filtered_list)
 ```
+
 Output:
+
 ```
-[{'name': 'alice', 'age': 20, 'weight': 160, 'sex': 'male', 'id': 1}, 
+[{'name': 'alice', 'age': 20, 'weight': 160, 'sex': 'male', 'id': 1},
 {'name': 'bob', 'age': 10, 'weight': 130, 'sex': 'male', 'id': 2}]
 ```
 
 # Ex. 3 Map BMI
+
 Given the following list:
 
 ```python
@@ -84,12 +93,13 @@ people_list = [
 ```
 
 Create a function called `calc_bmi()` that accepts this list and calculates the BMI (Body Mass Index) for
-each person.  The formula for BMI is:  BMI = weight/height<sup>2</sup>.  This can be expressed in python
+each person. The formula for BMI is: BMI = weight/height<sup>2</sup>. This can be expressed in python
 using this syntax: `round(weight / height ** 2, 1)`.
 
 The `calc_bmi()` function must use the `map()` function.
 
 Usage:
+
 ```python
 def ex3():
     people_list = [
@@ -101,12 +111,14 @@ def ex3():
 ```
 
 Output:
+
 ```
-[{'id': 2, 'name': 'bob', 'weight_kg': 90, 'height_meters': 1.7, 'bmi': 31.1}, 
+[{'id': 2, 'name': 'bob', 'weight_kg': 90, 'height_meters': 1.7, 'bmi': 31.1},
 {'id': 3, 'name': 'charlie', 'weight_kg': 80, 'height_meters': 1.8, 'bmi': 24.7}]
 ```
 
 # Ex. 4 List Comprehension
+
 Given the following list:
 
 ```python
@@ -117,10 +129,11 @@ people_list = [
 ]
 ```
 
-Create a function called `get_people()` that accepts a list of people.  Use a list comprehension
+Create a function called `get_people()` that accepts a list of people. Use a list comprehension
 to return the names of people that are equal to or greater than 15 years old.
 
 Usage:
+
 ```python
 def ex4():
     people_list = [
@@ -132,24 +145,26 @@ def ex4():
 ```
 
 Output:
+
 ```
 ['alice', 'charlie']
 ```
 
-
 # Ex. 5 Word Counter
-Create a class called `WordCounter`.  This class is to be consumed in the following manner:
+
+Create a class called `WordCounter`. This class is to be consumed in the following manner:
 
 ```python
     sentence = "This is a test of the emergency broadcast system"
     word_counter = WordCounter(sentence)
     word_counter.count_words()
-    print(word_counter.get_word_count())    # Returns the number of all the words.
+    print(word_counter.get_word_count()) # Returns the number of all the words.
     print(word_counter.get_shortest_word()) # Returns the length of the shortest word.
     print(word_counter.get_longest_word())  # Returns the length of the longest word.
 ```
 
 Output:
+
 ```
 9
 1
@@ -159,7 +174,9 @@ Output:
 Create the `WordCounter` class in your student directory and don't forget to import it in your `assignments.py` file.
 
 # Ex. 6 Tax Man
+
 Consider the following code:
+
 ```
     items = [
         {"id": 1, "desc": "clock", "price": 1.00},
@@ -172,19 +189,23 @@ Consider the following code:
 ```
 
 Create a Python class called `TaxMan` that accepts two arguments:
-  - A list of items (above)
-  - The percent sales tax (string)
+
+- A list of items (above)
+- The percent sales tax (string)
 
 The `TaxMan` class has two methods:
-  - `calc_total()`: Sums the price of all the items and applies the sales tax (saved to a private instance variable)
-  - `get_total()`: Returns the total price including the sales tax.
+
+- `calc_total()`: Sums the price of all the items and applies the sales tax (saved to a private instance variable)
+- `get_total()`: Returns the total price including the sales tax.
 
 Output:
+
 ```
 6.6
 ```
 
 # Ex. 7 Calculator
+
 Create a `Calculator` class that supports the following:
 
 ```python
@@ -206,17 +227,20 @@ Create a `Calculator` class that supports the following:
 ```
 
 Output:
+
 ```
 7
 1
 6
 4.0
 ```
+
 Create the `Calculator` class in your student directory and don't forget to import it in your `assignments.py` file.
 
-
 # Ex. 8 Car Collector
+
 Consider the following class:
+
 ```python
 class CarCollector:
     car_list = [
@@ -233,7 +257,7 @@ class CarCollector:
     @staticmethod
     def get_data():
         return list(map(CarCollector._combine, CarCollector.car_list))
-    
+
     @staticmethod
     def _combine(c):
         # Todo...
@@ -241,6 +265,7 @@ class CarCollector:
 ```
 
 Complete the `_combine()` method so that the `get_data()` method returns the following:
+
 ```
 [{'id': 1, 'make': 'Ford', 'price': 10000},
  {'id': 2, 'make': 'Mazda', 'price': 20000},
@@ -248,13 +273,17 @@ Complete the `_combine()` method so that the `get_data()` method returns the fol
 ```
 
 Usage:
+
 ```python
   pprint(CarCollector.get_data())
 ```
+
 Create the `CarCollector` class in your student directory and don't forget to import it in your `assignments.py` file.
 
-# Ex. 9  Inheritance
+# Ex. 9 Inheritance
+
 Consider the following base class:
+
 ```python
 import random
 
@@ -268,12 +297,14 @@ class Character:
         random_number = random.randint(1, 20)
         character.hit_points -= random_number
 ```
-This base class represents a medieval character (not a character on your computer keyboard).  Create `Fighter` and `Drawf` 
-classes that subclass the `Character` class.  Implement the `__repr__()` method in the `Fighter` and `Drawf` classes.  Add some 
-logic in the `Character` base class `fight()` method to make sure the hit points do not fall below zero when the `fight()` method 
+
+This base class represents a medieval character (not a character on your computer keyboard). Create `Fighter` and `Drawf`
+classes that subclass the `Character` class. Implement the `__repr__()` method in the `Fighter` and `Drawf` classes. Add some
+logic in the `Character` base class `fight()` method to make sure the hit points do not fall below zero when the `fight()` method
 has finished executing.
 
 The `Fighter` and `Drawf` class must support this usage:
+
 ```python
     f = Fighter(18)
     d = Dwarf(15)
@@ -286,17 +317,20 @@ The `Fighter` and `Drawf` class must support this usage:
 ```
 
 Example output:
+
 ```
 Fighter: 18 hit points.
 Drawf: 15 hit points.
 Fighter: 5 hit points.
 Drawf: 0 hit points.
 ```
+
 Be sure to place all classes in your student directory and don't forget to import them in your `assignments.py` file.
 
-
 # Ex. 10 Data Class
+
 Given the following data:
+
 ```python
     data = [
         "1, 2322, 10.00, False",
@@ -307,8 +341,9 @@ Given the following data:
     ]
 ```
 
-Convert this data (a list of strings) to a list of `Invoice` data classes, such that when this list is pprinted to the console, 
+Convert this data (a list of strings) to a list of `Invoice` data classes, such that when this list is pprinted to the console,
 it appears like the following:
+
 ```
 [Invoice(invoice_id='1', user_id='2322', amount='10.00', paid='False'),
 Invoice(invoice_id='2', user_id='5435', amount='60.30', paid='True'),
